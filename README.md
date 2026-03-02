@@ -16,7 +16,7 @@ Files are above
 
 We used the python script "mRNA-Analysis1.py" to perform data analysis and visualization for
   
-  --->[mRNA Data: os_target_gdc_clinical_data.tsv](https://master.cbioportal.org/study/summary?id=os_target_gdc) 
+  --->[mRNA Data: os_target_gdc_clinical_data.tsv](https://master.cbioportal.org/study/summary?id=os_target_gdc) (in folders Data Analysis and Datasets respectively)
   
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
