@@ -7,6 +7,10 @@ A joint research between the **Department of Math,Computer Science and Physics &
 
 We used the research project/paper [LncDC](https://www.nature.com/articles/s41598-022-22082-7) as the basis for our research.
 
+We used data sets from the Target-OS project
+----Dataset Sources-----
+  https://master.cbioportal.org/study/summary?id=os_target_gdc
+
 The Github repo for LncDC:https://github.com/lim74/LncDC
 
 **The contents below comes from the research proposal, they contains words like "will" implying our plans rather than action already taken, this README was written during the research process.**
