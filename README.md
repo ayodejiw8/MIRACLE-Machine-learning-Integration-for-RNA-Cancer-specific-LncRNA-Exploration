@@ -18,7 +18,6 @@ We used the python script "mRNA-Analysis1.py" to perform data analysis and visua
   
   --->[mRNA Data: os_target_gdc_clinical_data.tsv](https://master.cbioportal.org/study/summary?id=os_target_gdc) 
   
-  (in the folders Data Analyis and Datasets respctiviely)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **The contents below comes from the research proposal, they contains words like "will" implying our plans rather than action already taken, this README was written during the research process.**
