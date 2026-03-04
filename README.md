@@ -26,7 +26,9 @@ The Github repo for LncDC:https://github.com/lim74/LncDC
 
 **5.** The fourth Augmented Star Gene data in "gdc_download_20260304_201550.898969.tar.gz" and the python script in "4thaugmentedStarGeneAnalysis.py".
 
-**6.** The fifth Augmented Star Gene data in "null" and python script in "5thaugmentedStarGeneAnalysis.py"
+**6.** The fifth Augmented Star Gene data in "gdc_download_20260304_202621.467167.tar.gz" and python script in "5thaugmentedStarGeneAnalysis.py"
+
+
 ----
 ----
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
