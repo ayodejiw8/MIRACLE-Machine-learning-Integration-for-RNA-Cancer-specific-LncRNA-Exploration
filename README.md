@@ -19,6 +19,8 @@ Files are above
   --->[mRNA Data: os_target_gdc_clinical_data.tsv](https://master.cbioportal.org/study/summary?id=os_target_gdc) (in folders Data Analysis and Datasets respectively
   
 **2.** We downloaded Augmented Star Gene data "gdc_download_20260303_162919.355206.tar.gz" and perfomed and lncRNA focused analysis of it with the python script "augmentedStarGeneAnalysis.py"
+
+**3** We also have another Augmented Star Gene data in "null" and performed an analysis(lncRNA focused) in "null".
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **The contents below comes from the research proposal, they contains words like "will" implying our plans rather than action already taken, this README was written during the research process.**
