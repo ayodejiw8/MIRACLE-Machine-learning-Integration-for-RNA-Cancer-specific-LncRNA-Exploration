@@ -12,7 +12,7 @@ model_path = os.path.join(base_dir, 'os_lncrna_detector.pkl')
 model = joblib.load(model_path)
 
 st.title("MIRACLE Project: Osteosarcoma lncRNA Detector")
-st.markdown("Albany State University undergradualte research 2025-2026 cohort")
+st.markdown("Albany State University undergraduate research 2025-2026 cohort")
 st.markdown("Developed by Ayodeji Williams | Albany State University Bioinformatics")
 st.markdown("Mentors: Dr.Olabisi Ojo & Dr. Wanjun Hu")
 st.markdown("College of Arts and Science| Department of Math, CS and Physics & Department of Natural Sciences")
