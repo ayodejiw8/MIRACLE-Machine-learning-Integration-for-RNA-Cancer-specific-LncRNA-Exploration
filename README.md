@@ -34,7 +34,7 @@ The Github repo for LncDC:https://github.com/lim74/LncDC
 
 ## ML Model
 
-The first ML model has been built it is named "os_lncrna_detector.pkl" the detection code is named "1stMLModelDetCode.py"
+The first ML model has been built in the folder "ML-Model" and it's named "os_lncrna_detector.pkl" the detection code is "1stMLModelDetCode.py"
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
