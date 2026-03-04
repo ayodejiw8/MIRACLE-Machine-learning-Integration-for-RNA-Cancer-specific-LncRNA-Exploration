@@ -12,7 +12,7 @@ model_path = os.path.join(base_dir, 'os_lncrna_detector.pkl')
 model = joblib.load(model_path)
 
 st.title("MIRACLE Project: Osteosarcoma lncRNA Detector")
-st.markdown("Developed by Ayodeji Williams | ASU Bioinformatics")
+st.markdown("Developed by Ayodeji Williams | Albany State University Bioinformatics")
 
 st.sidebar.header("User Input")
 uploaded_file = st.sidebar.file_uploader("Upload STAR-Aligned Gene Counts (.tsv)", type="tsv")
