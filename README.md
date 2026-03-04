@@ -22,8 +22,9 @@ The Github repo for LncDC:https://github.com/lim74/LncDC
 
 **3.** We also have another Augmented Star Gene data in "gdc_download_20260303_170024.760832.tar.gz" and performed an analysis(lncRNA focused) in "2ndaugmentedStarGeneAnalysis.py".
 
-**4.** The third Augmented Star Gene da in "gdc_download_20260303_162919.355206.tar.gz" and the python script in "3rdaugmentedStarGeneAnalysis.py".
+**4.** The third Augmented Star Gene data in "gdc_download_20260303_162919.355206.tar.gz" and the python script in "3rdaugmentedStarGeneAnalysis.py".
 
+**5.** The fourth Augmented Star Gene data in "gdc_download_20260304_201550.898969.tar.gz" and the python scrip in "4thaugmentedStarGeneAnalysis.py".
 ----
 ----
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
