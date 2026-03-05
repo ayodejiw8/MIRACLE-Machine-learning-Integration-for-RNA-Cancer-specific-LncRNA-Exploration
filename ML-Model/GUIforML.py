@@ -25,7 +25,7 @@ st.title("🧬 MIRACLE: Multi-Omic Osteosarcoma Detector")
 st.markdown("### Albany State University Undergraduate Research 2025-2026")
 st.markdown("**Principal Investigator:** Ayodeji Williams | **Mentors:** Dr. Olabisi Ojo & Dr. Wanjun Hu")
 st.markdown("College of Arts and Sciences | Department of Math, CS, and Physics & Department of Natural Sciences")
-st.markdown("The Detector is designed to identify the Genomic Signature of Osteosarcoma. It specifically looks for the over-expression and structural amplification of two key long non-coding RNAs: MALAT1 and NEAT1.")
+st.markdown("**The Detector is designed to identify the Genomic Signature of Osteosarcoma. It specifically looks for the over-expression and structural amplification of two key long non-coding RNAs: MALAT1 and NEAT1.**")
 
 st.write("---")
 
