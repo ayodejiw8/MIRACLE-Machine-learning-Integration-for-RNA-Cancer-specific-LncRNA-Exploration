@@ -6,7 +6,7 @@ import os
 
 # 1. PATH CONFIGURATION
 base_dir = os.path.dirname(__file__)
-model_path = os.path.join(base_dir, 'os_lncrna_detector(1).pkl')
+model_path = os.path.join(base_dir, 'os_lncrna_detector (1).pkl')
 
 # 2. LOAD THE MULTI-OMIC MODEL (v1.3)
 # This model now understands RNA Expression, CNV, and Methylation
