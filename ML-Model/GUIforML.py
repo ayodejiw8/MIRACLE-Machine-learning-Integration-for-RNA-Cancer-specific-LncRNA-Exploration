@@ -22,7 +22,7 @@ st.set_page_config(page_title="MIRACLE Multi-Omic Hub", page_icon="🧬", layout
 
 st.title("🧬 MIRACLE: Multi-Omic Osteosarcoma Detector")
 st.markdown("### Albany State University Undergraduate Research 2025-2026")
-st.markdown("**Principal Investigator:** Ayodeji Williams | **Mentors:** Dr. Olabnisi Ojo & Dr. Wanjun Hu")
+st.markdown("**Principal Investigator:** Ayodeji Williams | **Mentors:** Dr. Olabisi Ojo & Dr. Wanjun Hu")
 st.markdown("College of arts and sciences|Department of Math, CS, and Physics & Department of Natural Sciences")
 
 st.write("---")
