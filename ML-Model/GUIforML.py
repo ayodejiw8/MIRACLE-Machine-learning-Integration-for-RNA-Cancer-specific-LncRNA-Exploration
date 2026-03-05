@@ -28,33 +28,41 @@ st.markdown("*College of Arts and Science | Dept. of Math, CS and Physics & Dept
 
 st.write("---")
 
-# 4. SIDEBAR - FIXED INSTRUCTION MESSAGE
+# 4. SIDEBAR INSTRUCTIONS
 st.sidebar.header("User Control Panel")
-
-# This message will always show in the sidebar
 st.sidebar.markdown("""
 **Instructions:**
-1. Click 'Browse files' below.
-2. Upload a **.tsv** file from your GDC batch.
-3. The AI will extract **MALAT1** and **NEAT1** to assess risk.
+1. Upload a **.tsv** STAR-aligned file.
+2. The AI will scan for **MALAT1** & **NEAT1**.
+3. Results will display in the main window.
 """)
 
 uploaded_file = st.sidebar.file_uploader("Upload Genomic Profile (.tsv)", type="tsv")
 
 # 5. MAIN LOGIC
 if model is None:
-    st.error("Critical Error: 'os_lncrna_detector.pkl' not found. Please ensure the model file is in the same folder as this script.")
+    st.error("Critical Error: Model file 'os_lncrna_detector.pkl' missing.")
 
 elif uploaded_file is not None:
     try:
-        # Standardize data reading
-        df = pd.read_csv(uploaded_file, sep='\t')
-        df.columns = [c.lower() for c in df.columns]
-
-        # Check if we need to skip headers (STAR counts specific)
-        if 'gene_name' not in df.columns and 'gene symbol' not in df.columns:
-            df = pd.read_csv(uploaded_file, sep='\t', skiprows=1)
-            df.columns = [c.lower() for c in df.columns]
+        # --- ROBUST FILE READING ---
+        # We read the file line by line to find the actual header row
+        # GDC files typically start the data after several metadata lines
+        
+        # Reset file pointer
+        uploaded_file.seek(0)
+        lines = uploaded_file.readlines()
+        skip_count = 0
+        for i, line in enumerate(lines):
+            line_str = line.decode('utf-8')
+            if 'gene_id' in line_str or 'gene_name' in line_str:
+                skip_count = i
+                break
+        
+        # Re-read the file with the correct skip-row count
+        uploaded_file.seek(0)
+        df = pd.read_csv(uploaded_file, sep='\t', skiprows=skip_count)
+        df.columns = [c.lower().strip() for c in df.columns]
 
         # Identify Column Names
         gene_col = 'gene_name' if 'gene_name' in df.columns else 'gene symbol'
@@ -65,15 +73,15 @@ elif uploaded_file is not None:
         n1_data = df[df[gene_col].str.contains('NEAT1', na=False, case=False)]
         
         if not m1_data.empty and not n1_data.empty:
-            malat1 = m1_data[val_col].values[0]
-            neat1 = n1_data[val_col].values[0]
+            malat1 = float(m1_data[val_col].values[0])
+            neat1 = float(n1_data[val_col].values[0])
             
             st.write(f"### Analysis for {uploaded_file.name}")
             col1, col2 = st.columns(2)
-            col1.metric("MALAT1 Level", f"{malat1:.2f}")
-            col2.metric("NEAT1 Level", f"{neat1:.2f}")
+            col1.metric("MALAT1 TPM", f"{malat1:.2f}")
+            col2.metric("NEAT1 TPM", f"{neat1:.2f}")
 
-            # Predict
+            # Prediction
             sample = pd.DataFrame([[malat1, neat1]], columns=['MALAT1', 'NEAT1'])
             prob = model.predict_proba(sample)[0][1]
             
@@ -90,15 +98,14 @@ elif uploaded_file is not None:
             st.progress(prob)
             
         else:
-            st.warning("⚠️ MALAT1 or NEAT1 not found. Ensure your file uses standard GDC gene symbols.")
+            st.warning("⚠️ MALAT1 or NEAT1 not found in the parsed data. Please check file format.")
 
     except Exception as e:
         st.error(f"Error processing file: {e}")
 
 else:
-    # This shows in the MAIN window when no file is uploaded
-    st.info("Please upload a .tsv file in the sidebar to begin the AI analysis.")
+    st.info("Please upload a .tsv file in the sidebar to begin analysis.")
 
 # 6. FOOTER
 st.markdown("---")
-st.caption("MIRACLE v1.3 | Powered by Multi-Omic Random Forest | ASU 2026")
+st.caption("MIRACLE v1.3 | ASU 2026")
