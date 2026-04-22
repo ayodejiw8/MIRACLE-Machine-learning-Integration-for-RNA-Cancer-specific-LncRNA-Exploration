@@ -66,6 +66,13 @@ The methods for this study will involve a comprehensive workflow integrating dat
 ## Analysis plan (from research proposal)
 The analysis plan will systematically compare the predictive performance of CPAT, PLEK, CPC2, CPPred, LncFinder, and COME using benchmark osteosarcoma and control RNA-Seq datasets. Each tool’s predictions for lncRNA versus protein-coding transcripts will be evaluated against ground truth annotations, calculating sensitivity, specificity, precision, F1-score, and overall accuracy for quantitative assessment. Further, receiver operating characteristic (ROC) and precision-recall (PR) curves will be generated to visualize performance metrics and discriminate thresholds across tools. Discrepancies in predictions will be examined through cross-tool Venn diagrams and feature importance ranking to highlight agreement and divergence, as well as to identify features most influential in classification outcomes. Instances of misclassification or discordant results will be tracked to characterize potential sources of error (e.g., transcript length, sequence ambiguity, GC content). The statistical analysis will be complemented by computational efficiency, runtime, and user experience observations, guiding practical recommendations for undergraduate research use. All findings, scripts, and data visualizations will be integrated into Jupyter Notebooks and openly shared for training, reproducibility, and transparent evaluation of tool performance in disease-relevant lncRNA discovery.
 
+
+🤖 Technical Stack
+Language: Python 3.12
+Machine Learning: Scikit-Learn (Random Forest Classifier)
+Bioinformatics: GDC Data Portal (TARGET-OS Dataset), LncDC
+Data Processing: Pandas, NumPy, Joblib
+
 ## References
 Ghert, M., Mwita, W., & Mandari, F. N. (2019). Primary Bone Tumors in Children and Adolescents Treated at a Referral Center in Northern Tanzania. Journal of the American Academy of Orthopaedic Surgeons. Global research & reviews, 3(3), e045. https://doi.org/10.5435/JAAOSGlobal-D-17-00045
 
